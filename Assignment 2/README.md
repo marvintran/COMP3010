@@ -7,23 +7,19 @@
 * Professor: Peter Graham
 * Winter 2019
 
-## Q3 - Multi Threaded RMI
+## Q1 - Perl and Python clients
 
-1. compile the java source files in folder /Q3_RMI:
-	* javac MultiThreadBank.java
-	* javac MultiThreadBankIface.java
-	* javac Client.java
-	* javac Server.java
-  * Alternatively do: javac *.java
+1. complie the server in folder /Q1_Perl_Python
+   * ServMulti.java
 
-2. Start the registry on port XXXXX
-	* rmiregistry XXXXX &
+2. Start the server - ASSUMED TO RUN ON owl.cs.umanitoba.ca
+   * java ServMulti
 
-3. Start the server - ASSUMED TO RUN ON OWL.CS.UMANITOBA.CA
-	* java Server &
+3. Run the Python client using
+   * python ClientPython.py
 
-4. Start the client
-	* java Client
+4. Run the Perl client using
+   * perl ClientPerl.pl
 
 ## Q2 - Multi Threaded Stream Socket using MySQL/MariaDB
 
@@ -50,7 +46,7 @@
 	* javac MultiThreadBankIface.java
 	* javac Client.java
 	* javac Server.java
-  * Alternatively do: javac *.java
+	* Alternatively do: javac *.java
 
 2. Start the registry on port XXXXX
 	* rmiregistry XXXXX &

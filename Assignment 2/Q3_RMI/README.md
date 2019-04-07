@@ -14,7 +14,7 @@
 	* javac MultiThreadBankIface.java
 	* javac Client.java
 	* javac Server.java
-  * Alternatively do: javac *.java
+	* Alternatively do: javac *.java
 
 2. Start the registry on port XXXXX
 	* rmiregistry XXXXX &
