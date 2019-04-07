@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignnment 3</title>
+
+    <script>
+        var text = "";
+
+        function walkDom(node, level) {
+            var i;
+            var childnodes = node.children;
+
+            text += level + " &lt;" + node.nodeName + "&gt;<br>";
+
+            for (i = 0; i < childnodes.length; i++) {
+                if(childnodes[i]){
+                    walkDom(childnodes[i], level + 1);
+                }
+            }
+
+            text += level + " &lt;" + node.nodeName + "\\&gt;<br>";
+        }
+
+        function walkDomHelper() {
+            var htmlElement = document.getElementsByTagName("html")[0];
+            //var htmlElement = document.documentElement;
+            var level = 1;
+
+            walkDom(htmlElement, level);
+            document.getElementById("result").innerHTML = text;
+        }
+    </script>
+</head>
+
+<body>
+    <p>Test paragraph with <strong>strong</strong> inside of it.</p>
+
+    <input type="button" onclick="walkDomHelper()" value="Walk DOM" />
+    <div id="result" >DOM values will be here replacing this div.</div>
+</body>
+</html>

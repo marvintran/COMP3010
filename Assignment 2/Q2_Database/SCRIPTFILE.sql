@@ -1,0 +1,5 @@
+CREATE TABLE tranm346_BANKACCOUNTS (
+  accNum INTEGER,
+  balance INTEGER,
+  PRIMARY KEY (accNum)
+);
